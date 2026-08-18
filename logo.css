@@ -1,0 +1,4 @@
+.brand-logo{height:58px;display:flex;align-items:center}
+.brand-logo img{display:block;width:164px;height:58px;object-fit:contain;mix-blend-mode:multiply}
+footer .brand-logo img{mix-blend-mode:screen;filter:brightness(1.55) grayscale(1)}
+@media(max-width:760px){.brand-logo{height:50px}.brand-logo img{width:132px;height:50px}}
