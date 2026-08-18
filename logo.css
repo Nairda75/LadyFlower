@@ -1,4 +1,9 @@
-.brand-logo{height:58px;display:flex;align-items:center}
-.brand-logo img{display:block;width:164px;height:58px;object-fit:contain;mix-blend-mode:multiply}
+.brand-logo{height:80px;display:flex;align-items:center}
+.brand-logo img{display:block;width:260px;height:80px;object-fit:contain;object-position:left center;mix-blend-mode:multiply}
 footer .brand-logo img{mix-blend-mode:screen;filter:brightness(1.55) grayscale(1)}
-@media(max-width:760px){.brand-logo{height:50px}.brand-logo img{width:132px;height:50px}}
+.scroll-bloom{position:fixed;z-index:1;right:3.5vw;top:50%;width:clamp(130px,17vw,260px);aspect-ratio:1;pointer-events:none;opacity:calc(.03 + var(--bloom-progress, 0) * .68);transform:translateY(calc(-50% + var(--bloom-progress, 0) * 72px)) rotate(calc(-20deg + var(--bloom-progress, 0) * 68deg)) scale(calc(.65 + var(--bloom-progress, 0) * .55));transition:opacity .12s linear;mix-blend-mode:multiply;filter:saturate(.8) contrast(1.05)}
+.scroll-bloom img{width:100%;height:100%;border-radius:50%;object-fit:cover;box-shadow:0 15px 35px rgba(81,50,42,.16)}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1)}
+.reveal.is-visible{opacity:1;transform:none}.occasion-card:nth-child(2){transition-delay:.09s}.occasion-card:nth-child(3){transition-delay:.18s}.occasion-card:nth-child(4){transition-delay:.27s}.gallery-grid.is-visible .gallery-item{animation:galleryEnter .9s cubic-bezier(.22,1,.36,1) both}.gallery-grid.is-visible .g2{animation-delay:.12s}.gallery-grid.is-visible .g3{animation-delay:.25s}@keyframes galleryEnter{from{opacity:0;transform:translateY(26px) scale(.975)}to{opacity:1;transform:none}}
+@media(max-width:760px){.brand-logo{height:62px}.brand-logo img{width:188px;height:62px}.scroll-bloom{width:115px;right:-28px}.reveal{transform:translateY(22px)}}
+@media(prefers-reduced-motion:reduce){.scroll-bloom{display:none}.reveal,.reveal.is-visible{opacity:1;transform:none;transition:none}.gallery-grid.is-visible .gallery-item{animation:none}}
