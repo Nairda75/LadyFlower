@@ -1,2 +1,2 @@
-# Artez-
+# Artezé-
 (florista) 
